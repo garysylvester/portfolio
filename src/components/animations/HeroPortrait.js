@@ -1,10 +1,16 @@
 import React from "react"
 import styled from "styled-components"
+// import { Parallax } from "react-scroll-parallax"
 
 export default function HeroPortrait() {
   return (
     <HeroWrapper>
-      <div className="portrait" />
+      <ImageWrapper>
+        {/* <Parallax y={[-20, 20]}> */}
+        <Image src="/images/background/hero-portrait.png" alt="portrait" />
+        {/* </Parallax> */}
+      </ImageWrapper>
+      {/* <div className="portrait" /> */}
     </HeroWrapper>
   )
 }
@@ -50,7 +56,7 @@ const HeroWrapper = styled.div`
     height: 896px;
     right: 0px;
     top: 0px;
-    background: url("/images/background/hero-portrait.png");
+    /* background: url("/images/background/hero-portrait.png"); */
     background-size: cover;
 
     @media (max-width: 1072px) {
@@ -72,3 +78,9 @@ const HeroWrapper = styled.div`
     }
   }
 `
+
+const ImageWrapper = styled.div`
+  position: relative;
+`
+
+const Image = styled.img``

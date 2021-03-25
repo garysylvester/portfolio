@@ -4,6 +4,7 @@ import SEO from "../components/layout/seo"
 import AboutSection from "../components/sections/AboutSection"
 import HeroSection from "../components/sections/HeroSection"
 import ProjectSection from "../components/sections/ProjectSection"
+import ParallaxSection from "../components/sections/ParallaxSection"
 
 export default function IndexPage() {
   return (
@@ -11,6 +12,7 @@ export default function IndexPage() {
       <SEO title="Home" />
       <HeroSection />
       <AboutSection />
+      <ParallaxSection />
       <ProjectSection />
     </Layout>
   )
