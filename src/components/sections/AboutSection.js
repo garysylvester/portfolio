@@ -73,7 +73,7 @@ const AboutSectionWrapper = styled.div`
 
   @media (max-width: 450px) {
     width: calc(100% - 48px);
-    padding-top: ${spacing.dimension.spaceLargest}px;
+    padding: ${spacing.dimension.spaceLargest}px 0;
   }
 
   @media (max-width: 768px) {
@@ -87,6 +87,10 @@ const LeftSide = styled.div`
   justify-content: flex-start;
   grid-template-rows: auto 1fr;
   gap: ${spacing.dimension.spaceMedium}px;
+
+  @media (max-width: 450px) {
+    gap: 0;
+  }
 `
 
 const RightSide = styled.div`

@@ -29,6 +29,11 @@ const SectionWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    height: 400px;
+  }
 `
 
 const ImageWrapper = styled.div`
@@ -42,10 +47,19 @@ const ImageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 450px) {
+      width: 100%;
+      height: 400px;
+    }
   }
 `
 const Image = styled.img`
   height: 960px;
+
+  @media (max-width: 450px) {
+    height: 592px;
+  }
 `
 
 const InnerDiv = styled.div`

@@ -31,16 +31,9 @@ const HeroWrapper = styled.div`
     height: 800px;
   }
 
-  @media (max-width: 1072px) {
-    right: 2%;
-    height: 600px;
-  }
-
-  /* @media (max-width: 768px) {
-  } */
-
   @media (max-width: 450px) {
     width: 100%;
+    right: 60px;
     height: auto;
   }
   :hover {
@@ -78,6 +71,9 @@ const ImageWrapper = styled.div`
 
     @media (max-width: 1072px) {
       height: 600px;
+    }
+
+    @media (max-width: 450px) {
     }
   }
 `
