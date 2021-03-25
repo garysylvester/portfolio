@@ -8,7 +8,7 @@ export const projectCardData = [
     instagram: "@gsylvest",
     instagramLink: "https://www.instagram.com/frmthearchive/",
     image: "/images/thumbnails/test-image-01.jpg",
-    link: "/image1",
+    link: "/photography/collection1",
   },
   {
     title: "San Jose, CA",

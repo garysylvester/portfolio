@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { spacing } from "../../constraints/Tokens"
+import { color, spacing, typography } from "../../constraints/Tokens"
+import { SmallText } from "../styles/TextStyles"
 
 export default function MenuButton(props) {
   const { item } = props
@@ -9,14 +10,13 @@ export default function MenuButton(props) {
     <Link to={item.link} onClick={props.onClick}>
       <MenuItem title={item.title}>
         <img src={item.icon} alt={item.title} />
-        {item.title}
+        <MenuLabel>{item.title}</MenuLabel>
       </MenuItem>
     </Link>
   )
 }
 
 const MenuItem = styled.div`
-  color: rgba(0, 0, 0, 0.7);
   background: rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 24px auto;
@@ -26,9 +26,18 @@ const MenuItem = styled.div`
   transition: 0.5s ease-out;
   border-radius: 10px;
 
+  @media (max-width: 450px) {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   :hover {
     background: rgba(0, 0, 0, 0.1);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
       inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
   }
+`
+
+const MenuLabel = styled(SmallText)`
+  color: ${color.neutrals.neutral0};
+  text-transform: uppercase;
 `

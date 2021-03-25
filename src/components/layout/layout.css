@@ -136,3 +136,14 @@ a {
   font-weight: 600;
   text-decoration: none;
 }
+
+ul {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0 32px;
+}
+
+li {
+  padding: 4px 0;
+}

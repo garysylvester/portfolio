@@ -96,7 +96,7 @@ export const SmallText = styled.p`
 
 export const SmallText2 = styled.p`
   font-family: ${typography.monospaceFont};
-  font-weight: 500;
+  font-weight: 300;
   font-size: 10px;
   line-height: 130%;
   text-transform: uppercase;

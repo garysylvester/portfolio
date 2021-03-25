@@ -2,15 +2,13 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { H1, MediumText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
-import PurchaseButton from "../buttons/PurchaseButton"
-import MockupAnimation from "../animations/MockupAnimation"
-import { spacing } from "../../constraints/Tokens"
-import WaveBackground from "../backgrounds/WaveBackground"
+import { color, spacing } from "../../constraints/Tokens"
+import BackrgoundSection from "../backgrounds/HeroBackground"
 
-function HeroSection() {
+export default function HeroSection() {
   return (
-    <Wrapper>
-      <WaveBackground />
+    <HeroSectionWrapper>
+      <BackrgoundSection />
       <ContentWrapper>
         <TextWrapper>
           <Title>
@@ -19,49 +17,59 @@ function HeroSection() {
           <Desctiption>
             i'm a senior ux designer at Electronic Arts, where I spend my days
             finding ways to inspire the world to play.
-            <br />
-            but there’s much more to me than where I work...
           </Desctiption>
-          <PurchaseButton
-            title="Start Learning"
-            subtitle="100+ hours ov video"
-          />
         </TextWrapper>
-        <MockupAnimation />
       </ContentWrapper>
-    </Wrapper>
+    </HeroSectionWrapper>
   )
 }
-
-export default HeroSection
 
 const animation = keyframes` 
   0% { opacity: 0; transform: translateY(-10px);}
   100% { opacity: 1; transform: translateY(0px);}
 `
 
-const Wrapper = styled.div`
+const HeroSectionWrapper = styled.div`
   overflow: hidden;
+  position: relative;
+  height: 800px;
+
+  @media (max-width: 768px) {
+    height: 600px;
+  }
+
+  @media (max-width: 450px) {
+    height: 600px;
+  }
 `
 
 const ContentWrapper = styled.div`
   max-width: 1234px;
+  position: absolute;
   margin: 0 auto;
-  padding: 200px 30px;
+  bottom: 50%;
+  transform: translateY(50%);
+  padding: 0 32px;
+  height: auto;
   display: grid;
   grid-template-columns: 360px auto;
   gap: ${spacing.dimension.spaceLarger}px;
 
   @media (max-width: 450px) {
     grid-template-columns: auto;
-    gap: ${spacing.dimension.spaceLargest}px;
-    padding: 150px ${spacing.dimension.spaceMedium}px 250px;
+    gap: ${spacing.dimension.spaceMedium}px;
+    bottom: 32px;
+    transform: translateY(0);
   }
 `
 const TextWrapper = styled.div`
   max-width: 360px;
   display: grid;
-  gap: 32px;
+  gap: ${spacing.dimension.spaceLarger}px;
+
+  @media (max-width: 450px) {
+    gap: ${spacing.dimension.spaceMedium}px;
+  }
 
   > * {
     opacity: 0;
@@ -81,21 +89,19 @@ const TextWrapper = styled.div`
 
 const Title = styled(H1)`
   color: ${themes.light.text1};
-  background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-
-  span {
-    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
 
   @media (max-width: 450px) {
-    font-size: 48px;
+    font-size: 40px;
+    color: ${themes.dark.text1};
+  }
+
+  span {
+    color: ${color.brand.brandPrimary};
   }
 `
 
-const Desctiption = styled(MediumText)``
+const Desctiption = styled(MediumText)`
+  @media (max-width: 450px) {
+    color: ${themes.dark.text1};
+  }
+`
