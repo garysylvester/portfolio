@@ -14,6 +14,7 @@ export default function BackrgoundSection() {
 const BGWrapper = styled.div`
   position: relative;
   width: 100%;
+  height: 800px;
 `
 
 const Background = styled.div`

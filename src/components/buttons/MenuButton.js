@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { color, spacing, typography } from "../../constraints/Tokens"
+import { color, spacing } from "../../constraints/Tokens"
 import { SmallText } from "../styles/TextStyles"
 
 export default function MenuButton(props) {

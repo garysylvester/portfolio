@@ -32,7 +32,14 @@ const animation = keyframes`
 const HeroSectionWrapper = styled.div`
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
   height: 800px;
+  width: 100%;
+
+  @media (max-width: 1072px) {
+    height: 600px;
+  }
 
   @media (max-width: 768px) {
     height: 600px;
@@ -45,19 +52,40 @@ const HeroSectionWrapper = styled.div`
 
 const ContentWrapper = styled.div`
   max-width: 1234px;
+  width: calc(100% - 96px);
   position: absolute;
   margin: 0 auto;
   bottom: 50%;
   transform: translateY(50%);
-  padding: 0 32px;
   height: auto;
   display: grid;
   grid-template-columns: 360px auto;
   gap: ${spacing.dimension.spaceLarger}px;
 
+  @media (max-width: 880px) {
+    grid-template-columns: auto;
+    border-radius: 0 16px 0 0;
+    padding: 24px;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 1);
+    width: auto;
+    transform: translateY(0);
+    gap: ${spacing.dimension.spaceMedium}px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: auto;
+    gap: ${spacing.dimension.spaceMedium}px;
+    transform: translateY(0);
+  }
+
   @media (max-width: 450px) {
     grid-template-columns: auto;
     gap: ${spacing.dimension.spaceMedium}px;
+    padding: 0;
+    background: transparent;
+    padding: 24px;
     bottom: 32px;
     transform: translateY(0);
   }
@@ -66,6 +94,11 @@ const TextWrapper = styled.div`
   max-width: 360px;
   display: grid;
   gap: ${spacing.dimension.spaceLarger}px;
+
+  @media (max-width: 880px) {
+    gap: ${spacing.dimension.spaceMedium}px;
+    max-width: 300px;
+  }
 
   @media (max-width: 450px) {
     gap: ${spacing.dimension.spaceMedium}px;
@@ -89,6 +122,10 @@ const TextWrapper = styled.div`
 
 const Title = styled(H1)`
   color: ${themes.light.text1};
+
+  @media (max-width: 880px) {
+    font-size: 40px;
+  }
 
   @media (max-width: 450px) {
     font-size: 40px;

@@ -14,33 +14,34 @@ const HeroWrapper = styled.div`
   height: 896px;
   position: absolute;
   z-index: -1;
+  right: 20%;
+  transition: all 0s ease-in-out;
 
-  /* @media (max-width: 768px) {
-  } */
+  @media (max-width: 1280px) {
+    right: 5%;
+  }
+
+  @media (max-width: 1072px) {
+    right: 5%;
+    width: 600px;
+    height: 672px;
+  }
+
+  @media (max-width: 1072px) {
+    right: 2%;
+    width: 600px;
+    height: 672px;
+  }
+
+  @media (max-width: 768px) {
+  }
 
   @media (max-width: 450px) {
     width: 100%;
     height: auto;
   }
-
-  div {
-    transform: rotateY(0) rotateX(0);
-    transform-origin: bottom left;
-  }
-
-  * {
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-
-  :hover div {
-    transform: rotateY(0deg) rotateX(0deg);
-    &.portrait {
-      transition-delay: 0.1s;
-      transform: translate(-30px, -30px);
-    }
-    :hover {
-      filter: brightness(150%) saturate(120%);
-    }
+  :hover {
+    filter: brightness(150%) saturate(120%);
   }
 
   .portrait {
@@ -51,6 +52,12 @@ const HeroWrapper = styled.div`
     top: 0px;
     background: url("/images/background/hero-portrait.png");
     background-size: cover;
+
+    @media (max-width: 1072px) {
+      right: 0%;
+      width: 600px;
+      height: 672px;
+    }
 
     /* @media (max-width: 768px) {
       top: -190px;
