@@ -1,46 +1,43 @@
 import React from "react"
 import styled from "styled-components"
-// import { Parallax } from "react-scroll-parallax"
+import { Parallax } from "react-scroll-parallax"
 
 export default function HeroPortrait() {
   return (
     <HeroWrapper>
       <ImageWrapper>
-        {/* <Parallax y={[-20, 20]}> */}
-        <Image src="/images/background/hero-portrait.png" alt="portrait" />
-        {/* </Parallax> */}
+        <Parallax className="imageTest" y={[-30, 30]}>
+          <Image src="/images/background/hero-portrait.png" alt="portrait" />
+        </Parallax>
       </ImageWrapper>
-      {/* <div className="portrait" /> */}
     </HeroWrapper>
   )
 }
 
 const HeroWrapper = styled.div`
-  width: 800px;
-  height: 896px;
+  width: auto;
+  height: 800px;
   position: absolute;
   z-index: -1;
-  right: 20%;
+  right: 15%;
   transition: all 0s ease-in-out;
 
   @media (max-width: 1280px) {
-    right: 5%;
+    right: 2%;
   }
 
   @media (max-width: 1072px) {
     right: 5%;
-    width: 600px;
-    height: 672px;
+    height: 800px;
   }
 
   @media (max-width: 1072px) {
     right: 2%;
-    width: 600px;
-    height: 672px;
+    height: 600px;
   }
 
-  @media (max-width: 768px) {
-  }
+  /* @media (max-width: 768px) {
+  } */
 
   @media (max-width: 450px) {
     width: 100%;
@@ -52,35 +49,43 @@ const HeroWrapper = styled.div`
 
   .portrait {
     position: absolute;
-    width: 800px;
-    height: 896px;
+    width: auto;
+    height: 800px;
     right: 0px;
     top: 0px;
-    /* background: url("/images/background/hero-portrait.png"); */
     background-size: cover;
 
     @media (max-width: 1072px) {
-      right: 0%;
-      width: 600px;
-      height: 672px;
+      height: 600px;
     }
-
-    /* @media (max-width: 768px) {
-      top: -190px;
-      right: -300px;
-      transform: scale(0.4);
-    } */
 
     @media (max-width: 450px) {
       bottom: 0px;
-      width: 600px;
-      height: 672px;
+      height: 600px;
     }
   }
 `
 
 const ImageWrapper = styled.div`
   position: relative;
+
+  .imageTest {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1072px) {
+      height: 600px;
+    }
+  }
 `
 
-const Image = styled.img``
+const Image = styled.img`
+  height: 800px;
+
+  @media (max-width: 1072px) {
+    height: 600px;
+  }
+`

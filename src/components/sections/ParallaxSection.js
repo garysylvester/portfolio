@@ -4,22 +4,55 @@ import styled from "styled-components"
 
 export default function ParallaxSection() {
   return (
-    <Wrapper>
-      <Parallax y={[-20, 20]}>
-        <Image src="/images/background/parallax-test.jpg" alt="background" />
-      </Parallax>
-    </Wrapper>
+    <SectionWrapper>
+      <InnerDiv></InnerDiv>
+      <ImageWrapper>
+        <Parallax className="imageTest" y={[-20, 20]}>
+          <Image
+            src="/images/background/flower-shop-sky7.jpg"
+            alt="background"
+          />
+        </Parallax>
+      </ImageWrapper>
+    </SectionWrapper>
   )
 }
 
-const Wrapper = styled.div`
-  width: 100%;
-  height: 800px;
-  padding-top: 96px;
-  overflow: hidden;
+const SectionWrapper = styled.div`
   position: relative;
+  max-width: 1234px;
+  margin: 0 auto;
+  width: calc(100% - 96px);
+  height: 800px;
+  overflow: hidden;
   z-index: -1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+`
+
+const ImageWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: auto;
+
+  .imageTest {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
 const Image = styled.img`
-  max-width: 100%;
+  height: 960px;
+`
+
+const InnerDiv = styled.div`
+  width: 200px;
+  height: 96px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  margin: 24px;
 `

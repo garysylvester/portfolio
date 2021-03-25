@@ -4,7 +4,7 @@ import { GlobalStyle } from "../styles/GlobalStyle"
 import Header from "./Header"
 import "./layout.css"
 
-function Layout({ children }) {
+function AppLayout({ children }) {
   return (
     <ParallaxProvider>
       <GlobalStyle />
@@ -14,4 +14,4 @@ function Layout({ children }) {
   )
 }
 
-export default Layout
+export default AppLayout

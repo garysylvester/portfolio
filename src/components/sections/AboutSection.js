@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <AboutSectionWrapper>
       <SectionHeader>
-        <Title>Heres a little more about me</Title>
+        <Title>a little more about me</Title>
       </SectionHeader>
       <SectionContent>
         <LeftSide>
@@ -69,7 +69,7 @@ const AboutSectionWrapper = styled.div`
   display: grid;
   gap: ${spacing.dimension.spaceLarge}px;
   grid-template-rows: auto 1fr;
-  padding-top: ${spacing.layout.spaceMicro}px;
+  padding: ${spacing.layout.spaceMicro}px 0;
 
   @media (max-width: 450px) {
     width: calc(100% - 48px);
