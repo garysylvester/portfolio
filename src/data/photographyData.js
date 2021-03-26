@@ -1,4 +1,4 @@
-export const projectCardData = [
+export const photoCardData = [
   {
     title: "Oakland, CA",
     date: "03/10/1986",
@@ -7,7 +7,8 @@ export const projectCardData = [
     tag: "street",
     instagram: "@gsylvest",
     instagramLink: "https://www.instagram.com/frmthearchive/",
-    image: "/images/thumbnails/test-image-01.jpg",
+    thumbnail: "/images/photography/test-thumbnail-01.jpg",
+    hero: "/images/photography/test-hero-01.jpg",
     link: "/photography/collection1",
   },
   {
@@ -18,7 +19,7 @@ export const projectCardData = [
     tag: "street photo",
     instagram: "@gsylvest",
     instagramLink: "https://www.instagram.com/frmthearchive/",
-    image: "/images/thumbnails/test-image-02.jpg",
+    thumbnail: "/images/thumbnails/test-image-02.jpg",
     link: "/image2",
   },
   {
@@ -29,7 +30,7 @@ export const projectCardData = [
     tag: "street",
     instagram: "@frmthearchive",
     instagramLink: "https://www.instagram.com/frmthearchive/",
-    image: "/images/thumbnails/test-image-03.jpg",
+    thumbnail: "/images/thumbnails/test-image-03.jpg",
     link: "/image3",
   },
   {
@@ -40,7 +41,7 @@ export const projectCardData = [
     tag: "street",
     instagram: "@postpandempic",
     instagramLink: "https://www.instagram.com/frmthearchive/",
-    image: "/images/thumbnails/test-image-04.jpg",
+    thumbnail: "/images/thumbnails/test-image-04.jpg",
     link: "/image4",
   },
   {
@@ -51,7 +52,7 @@ export const projectCardData = [
     tag: "street",
     instagram: "@gsylvest",
     instagramLink: "https://www.instagram.com/frmthearchive/",
-    image: "/images/thumbnails/test-image-05.jpg",
+    thumbnail: "/images/thumbnails/test-image-05.jpg",
     link: "/image5",
   },
   {
@@ -62,7 +63,36 @@ export const projectCardData = [
     tag: "street",
     instagram: "@gsylvest",
     instagramLink: "https://www.instagram.com/frmthearchive/",
-    image: "/images/thumbnails/test-image-06.jpg",
+    thumbnail: "/images/thumbnails/test-image-06.jpg",
     link: "/image6",
+  },
+]
+
+export const Collection1PageData = [
+  {
+    title: "street photography",
+    date: "2020",
+    location: "Oakland, CA",
+    camera: "nikon fe2",
+    tag: "street",
+    instagram: "@gsylvest",
+    instagramLink: "https://www.instagram.com/frmthearchive/",
+    hero: "/images/photography/test-hero-01.jpg",
+
+    sectionTitle: "why I love analog photography",
+    left:
+      "Solution should be future scaleable to include non-EAD games.  In the future we may want to be able to generate a sale page of games even though we don’t have pricing information (eg. Xbox game sale).",
+    right:
+      "A player wants to know which games on Sale are available on EA Play so we can upsell a membership",
+
+    image1: "",
+    image2: "",
+    image3: "",
+    image4: "",
+    image5: "",
+    image6: "",
+    image7: "",
+    image8: "",
+    image9: "",
   },
 ]

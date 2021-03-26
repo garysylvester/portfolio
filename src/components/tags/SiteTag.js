@@ -8,7 +8,7 @@ export default function SiteTag(props) {
   const { item } = props
   return (
     <TagWrapper>
-      <TagInner>{item.tag}</TagInner>
+      <TagInner>{item}</TagInner>
     </TagWrapper>
   )
 }

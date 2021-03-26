@@ -15,10 +15,6 @@ const BGWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 800px;
-
-  @media (max-width: 1072px) {
-    height: 600px;
-  }
 `
 
 const Background = styled.div`

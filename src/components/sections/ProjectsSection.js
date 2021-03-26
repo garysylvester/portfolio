@@ -3,15 +3,15 @@ import React from "react"
 import styled from "styled-components"
 import { spacing } from "../../constraints/Tokens"
 import { H3 } from "../styles/TextStyles"
-import { projectCardData } from "../../data/projectData"
+import { projectCardData } from "../../data/projectsData"
 import ProjectCard from "../cards/ProjectCard"
 
-export default function ProjectSection() {
+export default function ProjectsSection() {
   return (
     <SectionWrapper>
       <SectionHeader>
         <SectionInner>
-          <SectionTitle>Photography Collections</SectionTitle>
+          <SectionTitle>ux work</SectionTitle>
           <h2>Filters</h2>
         </SectionInner>
       </SectionHeader>
@@ -55,7 +55,7 @@ const SectionHeader = styled.div`
 const GridWrapper = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   gap: ${spacing.dimension.spaceLarge}px;
 

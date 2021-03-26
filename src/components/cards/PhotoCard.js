@@ -3,23 +3,25 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { spacing } from "../../constraints/Tokens"
 import SiteTag from "../tags/SiteTag"
+import InstagramTag from "../tags/InstagramTag"
 import { H5, SmallText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 
-export default function ProjectCard(props) {
+export default function PhotoCard(props) {
   const { item } = props
   return (
     <Link to={item.link} onClick={props.onClick}>
       <ProjectCardWrapper>
         <ProjectCardImageWrapper>
+          <InstagramTag item={item} />
           <CardImage item={item}>
             <img src={item.thumbnail} alt={item.title} />
           </CardImage>
         </ProjectCardImageWrapper>
         <ProjectCardTextWrapper>
-          <CardLocation>{item.title}</CardLocation>
-          <CardMeta className="cameraName">{item.client}</CardMeta>
-          <CardDate>{item.company}</CardDate>
+          <CardLocation>{item.location}</CardLocation>
+          <CardMeta className="cameraName">{item.camera}</CardMeta>
+          <CardDate>{item.date}</CardDate>
           <SiteTag item={item.tag} />
         </ProjectCardTextWrapper>
       </ProjectCardWrapper>
