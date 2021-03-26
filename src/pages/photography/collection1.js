@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/layout/seo"
-import AboutSection from "../../components/sections/AboutSection"
 import ParallaxHero from "../../components/sections/ParallaxHero"
 import TwoColumns from "../../components/text/TwoColumn"
 import { Collection1PageData } from "../../data/photographyData"
