@@ -27,12 +27,11 @@ const AboutSectionWrapper = styled.div`
   margin-top: ${spacing.layout.spaceMicro}px;
 
   @media (max-width: 450px) {
-    width: calc(100% - 48px);
-    padding: ${spacing.dimension.spaceLargest}px 0;
+    width: 100%;
   }
 
   @media (max-width: 768px) {
-    width: calc(100% - 48px);
+    width: 100%;
   }
 `
 

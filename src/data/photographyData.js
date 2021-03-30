@@ -1,9 +1,9 @@
 export const photoCardData = [
   {
-    title: "Oakland, CA",
-    date: "03/10/1986",
-    location: "Oakland, CA",
-    camera: "a7iii",
+    title: "street photography",
+    date: "01/2020 - present",
+    method: "film + digital",
+    imageCount: "105",
     tag: "street",
     instagram: "@gsylvest",
     instagramLink: "https://www.instagram.com/frmthearchive/",
@@ -12,10 +12,10 @@ export const photoCardData = [
     link: "/photography/collection1",
   },
   {
-    title: "San Jose, CA",
+    title: "animals",
     date: "03/10/1986",
-    location: "San Jose, CA",
-    camera: "Nikon FE2",
+    method: "film + digital",
+    imageCount: "64",
     tag: "street photo",
     instagram: "@gsylvest",
     instagramLink: "https://www.instagram.com/frmthearchive/",

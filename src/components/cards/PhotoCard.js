@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { spacing } from "../../constraints/Tokens"
 import SiteTag from "../tags/SiteTag"
-import InstagramTag from "../tags/InstagramTag"
 import { H5, SmallText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 
@@ -13,15 +12,17 @@ export default function PhotoCard(props) {
     <Link to={item.link} onClick={props.onClick}>
       <ProjectCardWrapper>
         <ProjectCardImageWrapper>
-          <InstagramTag item={item} />
           <CardImage item={item}>
             <img src={item.thumbnail} alt={item.title} />
           </CardImage>
         </ProjectCardImageWrapper>
         <ProjectCardTextWrapper>
-          <CardLocation>{item.location}</CardLocation>
-          <CardMeta className="cameraName">{item.camera}</CardMeta>
-          <CardDate>{item.date}</CardDate>
+          <CardLocation>{item.title}</CardLocation>
+          <ImageCount>
+            <CardMeta className="collection-size">{item.imageCount}</CardMeta>
+            <img src="/images/icons/collection.svg" />
+          </ImageCount>
+          <CardDate>{item.method}</CardDate>
           <SiteTag item={item.tag} />
         </ProjectCardTextWrapper>
       </ProjectCardWrapper>
@@ -36,6 +37,7 @@ const ProjectCardWrapper = styled.div`
   background: #ffffff;
   border-radius: ${spacing.dimension.spaceMedium}px;
   overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
 
   *,
   & {
@@ -43,9 +45,7 @@ const ProjectCardWrapper = styled.div`
   }
 
   :hover {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-      0px 10px 15px rgba(23, 0, 102, 0.15),
-      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     transform: translateY(-10px);
   }
 `
@@ -78,9 +78,23 @@ const ProjectCardTextWrapper = styled.div`
   justify-content: space-between;
   gap: ${spacing.dimension.spaceSmaller}px;
 
-  .cameraName {
+  .collection-size {
     justify-self: flex-end;
     text-align: right;
+  }
+`
+
+const ImageCount = styled.div`
+  display: grid;
+  grid-template-columns: auto 12px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  height: auto;
+  padding: 2px 0;
+
+  p {
+    padding-top: 2px;
   }
 `
 
