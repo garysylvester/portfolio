@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { H1, MediumText } from "../styles/TextStyles"
+import { H2, MediumText, SmallText2 } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 import { color, spacing } from "../../constraints/Tokens"
 import BackrgoundSection from "../backgrounds/HeroBackground"
@@ -12,11 +12,14 @@ export default function HeroSection() {
       <ContentWrapper>
         <TextWrapper>
           <Title>
-            hi, i'm <span>gary</span>
+            William <span>Gary</span> Sylvester — Design Technologist
           </Title>
+          <Name>
+            A <span>maker</span> and his works; from UX to sandwiches.
+          </Name>
           <Desctiption>
-            i'm a senior ux designer at Electronic Arts, where I spend my days
-            finding ways to inspire the world to play.
+            Currently a Senior UX designer at Electronic Arts focusing on
+            eCommerce on ea.com.
           </Desctiption>
         </TextWrapper>
       </ContentWrapper>
@@ -59,7 +62,7 @@ const ContentWrapper = styled.div`
   transform: translateY(50%);
   height: auto;
   display: grid;
-  grid-template-columns: 360px auto;
+  grid-template-columns: 460px auto;
   gap: ${spacing.dimension.spaceLarger}px;
 
   @media (max-width: 880px) {
@@ -91,7 +94,7 @@ const ContentWrapper = styled.div`
   }
 `
 const TextWrapper = styled.div`
-  max-width: 360px;
+  max-width: 460px;
   display: grid;
   gap: ${spacing.dimension.spaceLarger}px;
 
@@ -119,8 +122,16 @@ const TextWrapper = styled.div`
     }
   }
 `
+const Title = styled(SmallText2)`
+  font-size: 14px;
 
-const Title = styled(H1)`
+  span {
+    color: ${color.neutrals.neutral1000};
+    font-weight: 800;
+  }
+`
+
+const Name = styled(H2)`
   color: ${themes.light.text1};
 
   @media (max-width: 880px) {

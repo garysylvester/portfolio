@@ -17,7 +17,7 @@ export const color = {
     neutral700: "",
     neutral800: "#2D2D2D",
     neutral900: "",
-    neutral1000: "",
+    neutral1000: "#000000",
   },
 }
 

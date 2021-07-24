@@ -9,7 +9,6 @@ export default function MenuButton(props) {
   return (
     <Link to={item.link} onClick={props.onClick}>
       <MenuItem title={item.title}>
-        <img src={item.icon} alt={item.title} />
         <MenuLabel>{item.title}</MenuLabel>
       </MenuItem>
     </Link>
@@ -17,14 +16,10 @@ export default function MenuButton(props) {
 }
 
 const MenuItem = styled.div`
-  background: rgba(0, 0, 0, 0.1);
-  display: grid;
-  grid-template-columns: 24px auto;
-  gap: ${props => (props.title ? "12px" : "0px")};
   padding: ${spacing.dimension.spaceSmaller}px;
   align-items: center;
   transition: 0.5s ease-out;
-  border-radius: 10px;
+  border-radius: 4px;
 
   @media (max-width: 450px) {
     color: rgba(255, 255, 255, 0.7);
@@ -38,6 +33,6 @@ const MenuItem = styled.div`
 `
 
 const MenuLabel = styled(SmallText)`
-  color: ${color.neutrals.neutral0};
+  color: ${color.neutrals.neutral1000};
   text-transform: uppercase;
 `

@@ -6,7 +6,7 @@ import SiteTag from "../tags/SiteTag"
 import { H5, SmallText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 
-export default function PhotoCard(props) {
+export default function photoCollectionCard(props) {
   const { item } = props
   return (
     <Link to={item.link} onClick={props.onClick}>
@@ -20,7 +20,7 @@ export default function PhotoCard(props) {
           <CardLocation>{item.title}</CardLocation>
           <ImageCount>
             <CardMeta className="collection-size">{item.imageCount}</CardMeta>
-            <img src="/images/icons/collection.svg" />
+            <img src={item.imageCountIcon} alt={item.ImageCount} />
           </ImageCount>
           <CardDate>{item.method}</CardDate>
           <SiteTag item={item.tag} />

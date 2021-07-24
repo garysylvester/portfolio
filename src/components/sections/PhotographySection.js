@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { spacing } from "../../constraints/Tokens"
 import { H3 } from "../styles/TextStyles"
 import { photoCardData } from "../../data/photographyData"
-import PhotoCard from "../cards/PhotoCard"
+import PhotoCollectionCard from "../cards/photoCollectionCard"
 
 export default function PhotographySection() {
   return (
@@ -17,7 +17,7 @@ export default function PhotographySection() {
       </SectionHeader>
       <GridWrapper>
         {photoCardData.map((item, index) => (
-          <PhotoCard item={item} key={index} />
+          <PhotoCollectionCard item={item} key={index} />
         ))}
       </GridWrapper>
     </SectionWrapper>

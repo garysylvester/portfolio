@@ -1,34 +1,24 @@
 export const menuData = [
   {
-    title: "Courses",
+    title: "about",
     icon: "/images/icons/courses.svg",
     link: "/courses",
   },
   {
-    title: "Tutorials",
+    title: "work",
     icon: "/images/icons/tutorials.svg",
     link: "/tutorials",
   },
   {
-    title: "Pricing",
+    title: "contact",
     icon: "/images/icons/pricing.svg",
     link: "/pricing",
-  },
-  {
-    title: "",
-    icon: "/images/icons/search.svg",
-    link: "/search",
-  },
-  {
-    title: "",
-    icon: "/images/icons/account.svg",
-    link: "/account",
   },
 ]
 
 export const tooltipData = [
   {
-    title: "Profile",
+    title: "about",
     icon: "/images/icons/profile.svg",
     link: "/profile",
   },
